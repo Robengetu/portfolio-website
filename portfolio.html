@@ -1,0 +1,181 @@
+/* ROBEN GETU */
+/* UGR/0157 */
+
+
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #003366;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #00bfff; 
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+        }
+        .profile {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #00bfff;
+            object-fit: cover;
+        }
+        .portfolio-item, .contact-form {
+            background: #fff;
+            border: 1px solid #00bfff; 
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            margin: 30px 0;
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        .portfolio-item:hover, .contact-form:hover {
+            transform: translateY(-15px);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #003366;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background: #003366;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #00bfff;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture"/>
+        </div>
+        <p>I’m a student who loves web development. I enjoy building websites that are both beautiful and easy to use. I’m always excited to learn new things and improve my skills in technology!</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="portfolio-item">
+            <h3>HTML</h3>
+            <p>HTML, or HyperText Markup Language, is the standard markup language used to create web pages. It provides the basic structure for a webpage, allowing developers to organize content and define how it should be displayed in web browsers. Here are some key points about HTML</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>CSS</h3>
+            <p>CSS, or Cascading Style Sheets, is a stylesheet language used to describe the presentation of a document written in HTML or XML. It enables developers to control the layout, design, and overall look of web pages. Here are some key points about CSS</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>JavaScript</h3>
+            <p>JavaScript (JS) is a high-level, dynamic, untyped, and interpreted programming language that is widely used for web development. It allows developers to create interactive and dynamic content on websites. Here are some key points about JavaScript</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+</footer>
+
+<script>
+    // Simple JavaScript to enhance the page
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
