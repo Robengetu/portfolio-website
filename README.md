@@ -16,7 +16,5 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 🛠 Tech Stack
 HTML5
-
-CSS3 / Tailwind / Bootstrap (whichever you use — specify)
-
-JavaScript (optional, if included)
+CSS3 
+JavaScript 
